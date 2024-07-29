@@ -1,10 +1,13 @@
 :root {
   --accent-color: #FF0070;
-  --accent-header-color: #DB00FF;
+  --accent-focus-color: #DB00FF;
+  --accent-text-color: #000028;
+  --main-fz: 18px;
+  --main-lh: 130%;
   --text-color: #F1B2CE;
   --header-fs-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-fs-desctop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --text-shadow: text-shadow: 4px 4px 0 var(--accent-color);
+  --text-shadow: 4px 4px 0 var(--accent-color);
   --main-font: 'IBM Plex mono';
   --bg-image: url(./images/cover-image-dark.png)
 }
