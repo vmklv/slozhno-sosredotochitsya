@@ -133,16 +133,14 @@
   inline-size: 9px;
   block-size: 9px;
   inset-block-start: 8px;
-}
-
-.header__rec::before {
   animation: flicker 1500ms linear infinite;
 }
-  @keyframes flicker {
-    50% {
-      opacity: 0;
-    }
+
+@keyframes flicker {
+  50% {
+    opacity: 0;
   }
+}
 
 .header__theme-menu {
   justify-self: end;
@@ -293,9 +291,9 @@ main {
   .picture__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-        "sunset sunset ice-cream"
-        "tape books ice-cream"
-        "tape street street";
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
     gap: 20px;
   }
 
@@ -329,7 +327,7 @@ main {
     justify-self: center;
     align-self: flex-start;
   }
-  
+
   .header__theme-menu-list {
     flex-direction: row;
   }
