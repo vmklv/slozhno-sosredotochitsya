@@ -13,6 +13,10 @@
     --text-color: #f1b2ce;
     --bg-image: url(../images/cover-image-dark.png);
   }
+
+  .header__rec {
+    display: none;
+  }
 }
 
 .page.theme_light {
@@ -39,10 +43,6 @@
 
 .decorated-zone::before {
   border-color: var(--section-header-color);
-}
-
-.header__rec {
-  display: none;
 }
 
 .section-header {

@@ -59,10 +59,6 @@
   font-size: 18px;
 }
 
-.header__theme-menu-button {
-  cursor: pointer;
-}
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--bg-image);
@@ -161,11 +157,12 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  padding: 0 13px;
+  padding: 0 14px;
   text-transform: lowercase;
   font-family: var(--main-font, sans-serif);
   color: var(--accent-color);
   font-weight: 400;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -187,7 +184,7 @@
 /* main */
 
 main {
-  margin-block-start: 30px;
+  margin-block-start: 31px;
   padding: 10px;
   display: grid;
   gap: 50px;
@@ -196,7 +193,14 @@ main {
 /* why section */
 /* what section */
 /* how section */
-/* picture */
+/* pictures */
+
+.pictures__text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
 
 .pictures {
   gap: 10px;
