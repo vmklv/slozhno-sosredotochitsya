@@ -1,23 +1,128 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* vars */
+
+.accent-shadow-text {
+  text-shadow: var(--text-shadow);
+}
+
+.accent-bg {
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.accent-text_bold {
+  font-weight: 700;
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.section-header {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.section-content {
+  display: grid;
+  gap: 20px;
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.how__list-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: 10px;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: var(--main-font, monospace);
+  font-size: var(--main-fz);
+  color: var(--text-color);
+  accent-color: var(--accent-color); /*  //акцентный цвет для чекбоксов итд */
 }
 
 /* header */
 
 .header {
   display: grid;
-  grid-template-rows: auto min-content auto;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   min-block-size: 100vh;
+  padding: 10px;
 }
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+}
+
+.header__rec {
+  position: absolute;
+  display: block;
+  inset-block-start: 11px;
+  inset-inline-end: 40px;
+}
+
+.header__rec::after {
+  content: "rec";
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.header__rec::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  inset-inline-start: calc(100% + 9px);
+  inline-size: 9px;
+  block-size: 9px;
+  inset-block-start: 8px;
+}
+
+.header__rec::before {
+  animation: flicker 1500ms linear infinite;
+}
+  @keyframes flicker {
+    50% { opacity: 0; }
+  }
 
 .header__theme-menu {
   justify-self: end;
@@ -50,31 +155,59 @@
   line-height: 82.5%;
 }
 
+.header__text {
+  max-inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);;
+  justify-self: end;
+}
+
+/* main */
+
+main {
+  margin-block-start: 30px;
+  padding: 10px;
+  display: grid;
+  gap: 50px;
+}
+
 /* why section */
 
-.why {
-  margin-block-start: 30px;
+.why__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* what section */
 
-.what__heading {
-  margin-block-start: 20px;
-}
 
 /* how section */
 
-/* .how {
-  padding-inline-start: -10px;
-} */
-
 .how__heading {
   color: var(--accent-color);
-  margin-block-start: 30px;
+}
+
+/* picture */
+
+.pictures {
+  gap: 10px;
+}
+
+.picture__list {
+  display: grid;
+  gap: 10px;
+}
+
+.picture__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 /* footer */
 .footer {
+  position: relative;
   min-block-size: 100vh;
   display: flex;
   align-items: center;
@@ -86,4 +219,54 @@
   color: var(--accent-focus-color);
   font-weight: 700;
   text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+@media (768px <= width) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+  }
+
+  main {
+    margin-block-start: 40px;
+    padding: 20px;
+    display: grid;
+    gap: 80px;
+  }
+
+  .why {
+    grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 2fr;
+  }
+
+  .why__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .how {
+    grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 2fr;
+  }
+
+  .what__heading {
+    max-inline-size: 236px;
+  }
 }
