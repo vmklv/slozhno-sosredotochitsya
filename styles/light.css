@@ -4,9 +4,47 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ffc2e6;
+    --accent-focus-color: #db00ff;
+    --accent-text-color: #000028;
+    --section-header-color: #353430;
+    --text-color: #f1b2ce;
+    --bg-image: url(../images/cover-image-dark.png);
+  }
+}
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #FF8DCB;
+  --accent-focus-color: #FFC2E6;
+  --accent-text-color: #353430;
+  --section-header-color: #353430;
+  --text-color: #353430;
+  --bg-image: url(../images/cover-image-light.png);
+}
+
+.header__theme-menu-button {
+  color: var(--section-header-color);
+  outline-color: var(--section-header-color);
+}
+
+.decorated-zone::after {
+  border-color: var(--section-header-color);
+}
+
+.decorated-zone::before {
+  border-color: var(--section-header-color);
+}
+
+.header__rec {
+  display: none;
+}
+
+.section-header {
+  color: var(--section-header-color);
 }

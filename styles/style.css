@@ -6,6 +6,14 @@
   text-shadow: var(--text-shadow);
 }
 
+.section-header {
+  color: var(--section-header-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
 .accent-bg {
   background-color: var(--accent-color);
   color: var(--accent-text-color);
@@ -17,13 +25,6 @@
 
 .accent-text {
   color: var(--accent-color);
-}
-
-.section-header {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
 }
 
 .section-content {
@@ -56,6 +57,10 @@
 .how__list-title {
   font-weight: 400;
   font-size: 18px;
+}
+
+.header__theme-menu-button {
+  cursor: pointer;
 }
 
 .page {
@@ -197,9 +202,6 @@ main {
 
 /* how section */
 
-.how__heading {
-  color: var(--accent-color);
-}
 
 /* picture */
 
