@@ -31,6 +31,10 @@
     --bg-image: url(../images/cover-image-light.png);
   }
 
+  .page {
+    background-color: #FFF1F7;
+  }
+
   .header__rec {
     display: none;
   }
