@@ -112,7 +112,6 @@
 
 .header__rec {
   position: absolute;
-  display: block;
   inset-block-start: 11px;
   inset-inline-end: 40px;
 }
