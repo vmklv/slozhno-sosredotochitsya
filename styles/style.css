@@ -52,6 +52,14 @@
 .text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--accent-color);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--text-color);
+  }
 }
 
 .how__list-title {
@@ -163,6 +171,15 @@
   color: var(--menu-color);
   font-weight: 400;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-block-end: 1px solid var(--menu-color);
+    outline: none;
+  }
 }
 
 .header__theme-menu-button_active {
@@ -235,6 +252,16 @@ main {
   color: var(--accent-focus-color);
   font-weight: 700;
   text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+@media (hover: hover) {
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--menu-color);
+  }
+
+  .text-link:hover {
+    border-block-end: 1px solid var(--text-color);
+  }
 }
 
 @media (768px <= width) {

@@ -13,4 +13,5 @@
   --main-font: 'IBM Plex mono';
   --bg-image: url(../images/cover-image-dark.png);
   --opacity: 1;
+  --button-hover-color: rgba(50, 49, 45, 0.40);
 }
