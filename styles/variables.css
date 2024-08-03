@@ -12,4 +12,5 @@
   --text-shadow: 4px 4px 0 #FF0070;
   --main-font: 'IBM Plex mono';
   --bg-image: url(../images/cover-image-dark.png);
+  --opacity: 1;
 }

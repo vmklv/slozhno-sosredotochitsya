@@ -4,11 +4,6 @@
   переключая тему
 */
 
-@media (prefers-color-scheme: dark) {
-  .header__rec {
-    display: block;
-  }
-}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
@@ -28,4 +23,6 @@
   --text-shadow: 4px 4px 0 #FF0070;
   --main-font: 'IBM Plex mono';
   --bg-image: url(../images/cover-image-dark.png);
+  transition: 0.5s ease-in;
+  --opacity: 1;
 }

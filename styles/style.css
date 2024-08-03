@@ -115,6 +115,8 @@
   position: absolute;
   inset-block-start: 11px;
   inset-inline-end: 40px;
+  opacity: var(--opacity);
+  transition: 0.5s ease-in;
 }
 
 .header__rec::after {
