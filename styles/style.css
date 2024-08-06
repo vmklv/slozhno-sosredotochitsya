@@ -30,6 +30,7 @@
 .section-content {
   display: grid;
   gap: 20px;
+  
 }
 
 .content-list {
@@ -52,7 +53,7 @@
 .text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--accent-color);
-
+  rgba(255, 0, 112, 0.40);
   &:focus {
     outline: none;
   }
@@ -60,6 +61,18 @@
   &:focus-visible {
     outline: 1px solid var(--text-color);
   }
+}
+
+.how__heading {
+  grid-row-start: span 2;
+}
+
+.how__list:first-child {
+  gap: 0;
+}
+
+.how__list-text {
+  font-size: var(--main-fz);
 }
 
 .how__list-title {
@@ -70,7 +83,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--bg-image);
-  background-color: #000028;
+  background-color: var(--bg-color);
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
@@ -78,6 +91,7 @@
   font-family: var(--main-font, monospace);
   font-size: var(--main-fz);
   color: var(--text-color);
+  transition: 0.5s ease-in;
   accent-color: var(--accent-color); /*  //акцентный цвет для чекбоксов итд */
 }
 
@@ -88,6 +102,7 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   min-block-size: 100vh;
+  height: 668px;
   padding: 10px;
 }
 
@@ -124,7 +139,6 @@
   inset-block-start: 11px;
   inset-inline-end: 40px;
   opacity: var(--opacity);
-  transition: 0.5s ease-in;
 }
 
 .header__rec::after {
@@ -213,6 +227,8 @@ main {
 /* how section */
 /* pictures */
 
+
+
 .pictures__text {
   font-size: 18px;
   font-style: normal;
@@ -241,6 +257,7 @@ main {
 .footer {
   position: relative;
   min-block-size: 100vh;
+  height: 667px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +273,7 @@ main {
 
 @media (hover: hover) {
   .header__theme-menu-button:hover {
-    outline: 1px solid var(--menu-color);
+    outline: 1px solid var(--button-hover-color);
   }
 
   .text-link:hover {
@@ -292,21 +309,10 @@ main {
   main {
     margin-block-start: 40px;
     padding: 20px;
-    display: grid;
     gap: 80px;
   }
 
-  .why {
-    grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 2fr;
-  }
-
-  .why__list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .how {
+  .grid-template {
     grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 2fr;
   }
 
