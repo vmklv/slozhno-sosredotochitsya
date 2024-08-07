@@ -24,7 +24,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #ffc2e6;
+    --accent-color: #FF8DCB;
     --accent-focus-color: #FFC2E6;
     --accent-text-color: #353430;
     --section-header-color: #353430;

@@ -10,6 +10,7 @@
   --header-fs-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-fs-desctop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --text-shadow: 4px 4px 0 #FF0070;
+  --footer-text-shadow: 2px 2px 0px #FF0070;
   --main-font: 'IBM Plex mono', monospace;
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;

@@ -100,8 +100,8 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
-  min-block-size: 100vh;
-  height: 668px;
+  block-size: 100vh;
+  min-block-size: 668px;
   padding: 10px;
 }
 
@@ -255,19 +255,19 @@ main {
 /* footer */
 .footer {
   position: relative;
-  min-block-size: 100vh;
-  height: 667px;
+  block-size: 100vh;
+  min-block-size: 668px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-start: 40px;
+  margin-block-start: 30px;
 }
 
 .footer__text {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--accent-focus-color);
   font-weight: 700;
-  text-shadow: 2px 2px 0px var(--accent-color);
+  text-shadow: var(--footer-text-shadow);
 }
 
 @media (hover: hover) {
